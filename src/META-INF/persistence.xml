@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="Trying_EE7">
+		<class>org.celtab.domain.address.Address</class>
+		<class>org.celtab.domain.address.CEP</class>
+		<class>org.celtab.domain.address.City</class>
+		<class>org.celtab.domain.address.Country</class>
+		<class>org.celtab.domain.address.Neighborhood</class>
+		<class>org.celtab.domain.address.EspecificAddress</class>
+		<class>org.celtab.domain.address.State</class>
+		<class>org.celtab.domain.address.Street</class>
+		
+		<class>org.celtab.domain.contacts.Email</class>
+		<class>org.celtab.domain.contacts.Phone</class>
+		<class>org.celtab.domain.documents.RegisterDocument</class>
+				
+		<class>org.celtab.domain.person.Person</class>
+		<class>org.celtab.domain.person.Natural</class>
+		<class>org.celtab.domain.person.Legal</class>
+		<class>org.celtab.domain.person.Gender</class>
+		
+		<class>org.celtab.domain.model.Bean</class>
+		<class>org.celtab.domain.model.TimeStampedBean</class>
+	</persistence-unit>
+</persistence>
