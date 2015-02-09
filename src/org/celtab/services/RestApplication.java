@@ -3,7 +3,7 @@ package org.celtab.services;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
-@ApplicationPath("/app")
+@ApplicationPath("/")
 public class RestApplication extends Application {
 
 }

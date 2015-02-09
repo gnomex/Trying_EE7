@@ -8,7 +8,7 @@ import javax.persistence.TypedQuery;
 
 import org.celtab.domain.model.Bean;
 
-public class GenericDao<T extends Bean> implements Dao<T> {
+public abstract class GenericDao<T extends Bean> implements Dao<T> {
     private final static String UNIT_NAME = "Marmots";
     
     @PersistenceContext(unitName = UNIT_NAME)
