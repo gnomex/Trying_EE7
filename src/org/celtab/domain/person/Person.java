@@ -1,16 +1,11 @@
 package org.celtab.domain.person;
 
-import java.util.List;
+import java.util.Collection;
 
-import javax.persistence.DiscriminatorColumn;
-import javax.persistence.Entity;
-import javax.persistence.Inheritance;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.OneToMany;
-import javax.persistence.InheritanceType;
-import javax.persistence.DiscriminatorType;
+import javax.persistence.OneToOne;
 
 import org.celtab.domain.address.EspecificAddress;
 import org.celtab.domain.contacts.Email;
@@ -26,16 +21,12 @@ public abstract class Person extends TimeStampedBean {
 	private static final long serialVersionUID = 1L;
 	
 	private String name;
-	
-	@OneToMany
-	@JoinColumn(name="owner_id", referencedColumnName="id")
-	private List<Phone> phones;
 
-	@OneToMany
-	@JoinColumn(name="owner_id", referencedColumnName="id")
-	private List<Email> emails;
+	private Collection<Phone> phones;
 
-	@ManyToOne
+	private Collection<Email> emails;
+
+	@OneToOne
 	private EspecificAddress address;
 	
 	public String getName() {
@@ -46,19 +37,23 @@ public abstract class Person extends TimeStampedBean {
 		this.name = name;
 	}
 
-	public List<Phone> getPhones() {
+	@OneToMany
+	@JoinColumn(name="owner_id", referencedColumnName="id")
+	public Collection<Phone> getPhones() {
 		return phones;
 	}
 
-	public void setPhones(List<Phone> phones) {
+	public void setPhones(Collection<Phone> phones) {
 		this.phones = phones;
 	}
 
-	public List<Email> getEmails() {
+	@OneToMany
+	@JoinColumn(name="owner_id", referencedColumnName="id")
+	public Collection<Email> getEmails() {
 		return emails;
 	}
 
-	public void setEmails(List<Email> emails) {
+	public void setEmails(Collection<Email> emails) {
 		this.emails = emails;
 	}
 
