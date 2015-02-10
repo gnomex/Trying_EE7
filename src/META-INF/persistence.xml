@@ -27,5 +27,64 @@
 
 		<class>org.celtab.domain.model.Bean</class>
 		<class>org.celtab.domain.model.TimeStampedBean</class>
+
+		<properties>
+
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.order_updates" value="true" />
+			<property name="current_session_context_class" value="thread" />
+			<property name="hibernate.use_sql_comments" value="true" />
+			<property name="hibernate.generate_statistics" value="true" />
+			<!-- <property name="hibernate.transaction.flush_before_completion" value="true"/> -->
+			<!-- <property name="hibernate.validator.apply_to_ddl" value="false"/> -->
+			<!-- <property name="hibernate.validator.autoregister_listeners" value="false"/> -->
+
+			<!-- <property name="hibernate.c3p0.min_size" value="5" /> -->
+			<!-- <property name="hibernate.c3p0.max_size" value="20" /> -->
+			<!-- <property name="hibernate.c3p0.timeout" value="1800" /> -->
+			<!-- <property name="hibernate.c3p0.max_statements" value="50"/> -->
+
+			<!-- Hibernate Cache Properties -->
+			<!-- <property name="hibernate.cache.use_minimal_puts" value="true"/> -->
+			<!-- <property name="hibernate.cache.use_query_cache" value="true"/> -->
+			<!-- <property name="hibernate.cache.use_second_level_cache" value="true"/> -->
+			<!-- <property name="hibernate.cache.use_structured_entries" value="true"/> -->
+
+			<!-- Disable the second-level cache -->
+			<!-- <property name="hibernate.cache.use_second_level_cache" value="true" 
+				/> -->
+			<!-- <property name="hibernate.cache.use_query_cache" value="true" /> -->
+			<!-- <property name="hibernate.cache.region.factory_class" value="org.hibernate.cache.infinispan.JndiInfinispanRegionFactory" 
+				/> -->
+			<!-- <property name="hibernate.cache.infinispan.cachemanager" value="java:CacheManager" 
+				/> -->
+
+
+			<!-- Hibernate Transaction Properties -->
+			<!-- <property name="hibernate.transaction.factory_class" value="org.hibernate.transaction.CMTTransactionFactory"/> -->
+			<!-- <property name="hibernate.transaction.factory_class" value="org.hibernate.transaction.JTATransactionFactory"/> -->
+			<!-- <property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.JBossTransactionManagerLookup"/> -->
+			<!-- <property name="hibernate.cache.infinispan.use_synchronization" value="false"/> -->
+			<!-- <property name="hibernate.cache.infinispan.entity.cfg" value="custom-entity"/> -->
+			<!-- <property name="hibernate.cache.infinispan.collection.cfg" value="custom-collection"/> -->
+			<!-- <property name="hibernate.cache.infinispan.query.cfg" value="custom-collection"/> -->
+			<!-- <property name="hibernate.cache.infinispan.timestamp.cfg" value="custom-timestamp"/> -->
+
+			<!-- <property name="hibernate.transaction.flush_before_completion" value="true" 
+				/> -->
+			<!-- <property name="hibernate.transaction.auto_close_session" value="true" 
+				/> -->
+
+			<!-- Miscellaneous Properties -->
+			<!-- <property name="hibernate.current_session_context_class" value="thread" 
+				/> -->
+			<!-- <property name="hibernate.cglib. use_reflection_optimizer" value="true" 
+				/> -->
+
+		</properties>
+
 	</persistence-unit>
 </persistence>
